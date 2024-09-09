@@ -2,13 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import logo from "../components/allphotos/LOGO 1.svg";
-import cart from "../components/allphotos/cartframe.svg";
-import about from "../components/allphotos/aboutframe.svg";
-import contact from "../components/allphotos/contactframe.svg";
-import account from "../components/allphotos/Login.svg";
 import Link from "next/link";
-import { FaUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -22,7 +16,12 @@ const Navbar = () => {
       <nav className="flex justify-between items-center w-full px-4 py-2">
         <div className="flex items-center mr-8">
           <Link href="/">
-            <Image src={logo} alt="logo" width={125} height={40} />
+            <Image
+              src="/images/LOGO%201.svg" // Direct path from public directory
+              alt="logo"
+              width={125}
+              height={40}
+            />
           </Link>
         </div>
         <ul className="flex items-center text-black list-none space-x-5">
@@ -41,7 +40,7 @@ const Navbar = () => {
               className="flex items-center text-sm text-black hover:text-white hover:bg-gray-700 px-4 py-2 rounded transition"
             >
               <Image
-                src={cart}
+                src="/images/cartframe.svg" // Direct path from public directory
                 alt="cart"
                 width={24}
                 height={24}
@@ -56,7 +55,7 @@ const Navbar = () => {
               className="flex items-center text-sm text-black hover:text-white hover:bg-gray-700 px-4 py-2 rounded transition"
             >
               <Image
-                src={about}
+                src="/images/aboutframe.svg" // Direct path from public directory
                 alt="about"
                 width={24}
                 height={24}
@@ -71,7 +70,7 @@ const Navbar = () => {
               className="flex items-center text-sm text-black hover:text-white hover:bg-gray-700 px-4 py-2 rounded transition"
             >
               <Image
-                src={contact}
+                src="/images/contactframe.svg" // Direct path from public directory
                 alt="contact"
                 width={24}
                 height={24}
@@ -82,17 +81,15 @@ const Navbar = () => {
           </li>
           {/* Profile Dropdown */}
           <li className="relative flex items-center">
-            {" "}
-            {/* Added margin-left */}
             <button
               onClick={toggleDropdown}
               className="flex items-center justify-center w-20 h-18 text-black hover:bg-gray-700 rounded transition"
             >
               <Image
-                src={account}
+                src="/images/Login.svg" // Direct path from public directory
                 alt="profile"
-                width={80} // Increased size
-                height={80} // Increased size
+                width={80}
+                height={80}
               />
             </button>
             {isDropdownOpen && (

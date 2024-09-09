@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image"; // Ensure you import Image from 'next/image'
-import Join from "../components/allphotos/Join.svg"; // Import your SVG file
 import Link from "next/link";
 
 const GreenBox = () => {
@@ -11,52 +10,26 @@ const GreenBox = () => {
   };
 
   return (
-    <div
-      className="green-bar"
-      style={{
-        width: "420px", // Adjust the width as needed
-        height: "250px", // Adjust the height as needed
-        backgroundColor: "rgba(0, 60, 60, 1)", // Updated color
-        borderRadius: "15px", // Curve the vertices
-        display: "flex", // Flexbox to center content, if needed
-        justifyContent: "center",
-        alignItems: "center",
-        position: "relative", // Set position relative for absolute positioning of children
-        marginTop: "300px", // Increase margin-top to move it down
-        marginBottom: "20px", // Adjust bottom margin if needed
-        marginLeft: "100px",
-      }}
-    >
+    <div className="w-[420px] h-[250px] bg-[#003C3C] rounded-[15px] flex justify-center items-center relative mt-[300px] mb-[20px] ml-[100px]">
       <main>
-        <h1 className="Headingbar">Start Vybing with us!</h1>
-        <h2 className="Subheading">
-          "We help influencers make money by monetizing their travel
-          plans,merchandise, and digital goods and many more."
+        <h1 className="text-white text-2xl font-bold">Start Vybing with us!</h1>
+        <h2 className="text-white mt-2">
+          "We help influencers make money by monetizing their travel plans,
+          merchandise, and digital goods and many more."
         </h2>
       </main>
-      <div
-        style={{
-          position: "absolute", // Absolute positioning
-          bottom: "11px", // Adjust distance from the bottom
-          left: "10px", // Adjust distance from the left
-        }}
-      >
+      <div className="absolute bottom-2 left-2">
         <button
-          className="Join"
+          className="flex justify-center items-center"
           onClick={handleJoinClick}
-          style={{
-            display: "flex", // Align the button correctly within the positioned div
-            justifyContent: "center",
-            alignItems: "center",
-          }}
         >
           <Link href="/signup">
             <Image
-              src={Join}
+              src="/images/Join.svg" // Direct path from the public directory
               width={110}
               height={45}
-              alt="greenbutton"
-              className="Joining"
+              alt="green button"
+              className="object-contain"
             />
           </Link>
         </button>

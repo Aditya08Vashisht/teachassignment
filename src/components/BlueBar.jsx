@@ -2,13 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import Itinerary from "../components/allphotos/Itinerary.svg";
-import button from "../components/allphotos/button.svg";
-import Indiagate from "../components/allphotos/Indiagate.svg";
-import rightarrow from "../components/allphotos/rightarrow.svg";
-import leftarrow from "../components/allphotos/leftarrow.svg";
-import pricing from "../components/allphotos/pricing.svg";
-import More from "../components/allphotos/More.svg";
 
 const BlueBar = () => {
   const handleItineraryClick = () => {};
@@ -30,19 +23,19 @@ const BlueBar = () => {
         <div className="flex space-x-4 absolute top-5 right-5">
           <button onClick={handleItineraryClick}>
             <Image
-              src={Itinerary}
+              src="/images/Itinerary.svg" // Updated path
               width={155}
               height={190}
-              alt="box"
+              alt="Itinerary"
               className="object-contain"
             />
           </button>
           <button onClick={handleButtonClick}>
             <Image
-              src={button}
+              src="/images/button.svg" // Updated path
               width={155}
               height={190}
-              alt="demo"
+              alt="Button"
               className="object-contain"
             />
           </button>
@@ -69,11 +62,11 @@ const BlueBar = () => {
 
         <div className="ml-auto">
           <Image
-            src={Indiagate}
+            src="/images/Indiagate.svg" // Updated path
             width={340}
             height={240}
-            alt="monu"
-            className="object-contain ml-[45rem] mt-[10rem]"
+            alt="India Gate"
+            className="object-contain mt-4"
           />
         </div>
 
@@ -83,10 +76,10 @@ const BlueBar = () => {
           className="absolute top-[250px] right-5"
         >
           <Image
-            src={rightarrow}
+            src="/images/rightarrow.svg" // Updated path
             width={100}
             height={75}
-            alt="right arrow"
+            alt="Right Arrow"
             className="object-contain"
           />
         </button>
@@ -97,10 +90,10 @@ const BlueBar = () => {
           className="absolute top-[250px] left-5  transform rotate-180"
         >
           <Image
-            src={leftarrow}
+            src="/images/leftarrow.svg" // Updated path
             width={100}
             height={75}
-            alt="left arrow"
+            alt="Left Arrow"
             className="object-contain"
           />
         </button>
@@ -109,19 +102,19 @@ const BlueBar = () => {
         <div className="absolute flex space-x-4 bottom-5 ml-[7rem] mb-[10rem] left-5">
           <button onClick={handlePricingClick}>
             <Image
-              src={pricing}
+              src="/images/pricing.svg" // Updated path
               width={95}
               height={52}
-              alt="pricing"
+              alt="Pricing"
               className="object-contain"
             />
           </button>
           <button onClick={handleMoreClick}>
             <Image
-              src={More}
+              src="/images/More.svg" // Updated path
               width={85}
               height={45}
-              alt="more"
+              alt="More"
               className="object-contain"
             />
           </button>

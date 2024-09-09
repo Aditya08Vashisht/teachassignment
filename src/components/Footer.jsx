@@ -1,51 +1,15 @@
-// Footer.jsx
-
-"use client"; // Add this directive at the top
+"use client"; // Add this directive at the top if using Next.js
 
 import React from "react";
 import Image from "next/image";
-import icon from "../components/allphotos/icon.svg";
 
 const Footer = () => {
   return (
-    <footer
-      className="footer-container"
-      style={{
-        background: "#f4f4f9",
-        width: "100%",
-        height: "auto",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        padding: "20px", // Adjust padding as needed
-      }}
-    >
-      <h2
-        className="footer-heading"
-        style={{
-          fontSize: "2rem", // Adjust size as needed
-          fontWeight: "bold",
-          fontFamily: "Urbanist, sans-serif",
-          color: "#003C3C", // Background color
-          // color: "#FFFFFF", // Text color to ensure contrast
-          padding: "10px 20px", // Padding for better spacing
-          borderRadius: "8px", // Optional: Rounded corners for the heading
-          marginBottom: "10px", // Spacing between heading and subheading
-        }}
-      >
+    <footer className="bg-gray-100 w-full py-8 flex flex-col items-center">
+      <h2 className="text-2xl font-bold text-white bg-[#003C3C] px-4 py-2 rounded mb-2">
         FREQUENTLY ASKED QUESTIONS
       </h2>
-      <p
-        className="footer-subheading"
-        style={{
-          fontSize: "1rem", // Adjust size as needed
-          fontFamily: "Urbanist, sans-serif",
-          textAlign: "center",
-          size: "18px",
-          maxWidth: "800px", // Adjust width as needed
-          marginBottom: "30px", // Spacing between subheading and bar
-        }}
-      >
+      <p className="text-base text-center max-w-4xl mb-8 px-4">
         Quick answers to questions you may have. Can't find what you're looking
         for? <br /> Check out our full documentation.
       </p>
@@ -62,31 +26,15 @@ const Footer = () => {
       ].map((text, index) => (
         <div
           key={index}
-          className={`footer-bar${index + 1}`}
-          style={{
-            width: "730px",
-            height: "48px",
-            background: "#E5F0F1",
-            padding: "14px 20px",
-            marginBottom: "20px", // Adjust gap between bar and bottom content
-            borderRadius: "16px", // Border radius added
-            position: "relative", // Positioning for the icon
-            display: "flex",
-            alignItems: "center",
-          }}
+          className="bg-[#E5F0F1] w-[730px] h-[48px] px-4 flex items-center mb-5 rounded relative"
         >
           {text}
-          <button>
+          <button className="absolute right-4">
             <Image
-              src={icon}
+              src="/images/icon.svg" // Updated path to the image in the public/images directory
               alt="icon"
-              style={{
-                position: "absolute",
-                right: "20px", // Adjust distance from the right edge
-                width: "24px", // Adjust size as needed
-                height: "24px", // Adjust size as needed
-                top: "15px",
-              }}
+              width={24} // Adjust size as needed
+              height={24} // Adjust size as needed
             />
           </button>
         </div>

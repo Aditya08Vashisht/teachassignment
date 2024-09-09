@@ -1,8 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import cloud from "../components/allphotos/Group7501.svg";
-import boy from "../components/allphotos/selfieboy.svg";
-import arrows from "../components/allphotos/arrows.svg";
 
 const Hero = () => {
   return (
@@ -13,7 +10,7 @@ const Hero = () => {
             {[0, 1, 2, 3].map((index) => (
               <Image
                 key={index}
-                src={cloud}
+                src={`/images/Group7501.svg`} // Direct path from public directory
                 alt={`cloud-${index}`} // Corrected the alt attribute template literal
                 width={400}
                 height={520}
@@ -25,7 +22,7 @@ const Hero = () => {
       </div>
       <div>
         <Image
-          src={boy}
+          src={`/images/selfieboy.svg`} // Direct path from public directory
           width={450} // Adjusted width to make the boy image smaller
           height={420} // Adjusted height to maintain aspect ratio
           alt="hero-boy"
