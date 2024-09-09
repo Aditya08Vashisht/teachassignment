@@ -2,11 +2,6 @@
 
 import React from "react";
 import Image from "next/image"; // Import Next.js Image component
-import Image1 from "../components/allphotos/image1.svg";
-import Image2 from "../components/allphotos/image2.svg";
-import Image3 from "../components/allphotos/image3.svg";
-import Image4 from "../components/allphotos/image4.svg";
-import NewImage from "../components/allphotos/line.svg"; // Import your new image
 
 const Tutorial = () => {
   return (
@@ -14,7 +9,7 @@ const Tutorial = () => {
       {/* New Image Container */}
       <div className="new-image-container mr-[-5rem]">
         <Image
-          src={NewImage}
+          src="/images/line.svg" // Updated path
           width={150}
           height={600}
           alt="New Image"
@@ -26,19 +21,39 @@ const Tutorial = () => {
       <div className="images-container flex flex-col space-y-6">
         {/* Image 1 */}
         <div className="image-wrapper">
-          <Image src={Image1} width={450} height={550} alt="Image 1" />
+          <Image
+            src="/images/image1.svg" // Updated path
+            width={450}
+            height={550}
+            alt="Image 1"
+          />
         </div>
         {/* Image 2 */}
         <div className="image-wrapper">
-          <Image src={Image2} width={450} height={550} alt="Image 2" />
+          <Image
+            src="/images/image2.svg" // Updated path
+            width={450}
+            height={550}
+            alt="Image 2"
+          />
         </div>
         {/* Image 3 */}
         <div className="image-wrapper">
-          <Image src={Image3} width={450} height={550} alt="Image 3" />
+          <Image
+            src="/images/image3.svg" // Updated path
+            width={450}
+            height={550}
+            alt="Image 3"
+          />
         </div>
         {/* Image 4 */}
         <div className="image-wrapper">
-          <Image src={Image4} width={450} height={550} alt="Image 4" />
+          <Image
+            src="/images/image4.svg" // Updated path
+            width={450}
+            height={550}
+            alt="Image 4"
+          />
         </div>
       </div>
     </div>
